@@ -16,11 +16,6 @@ export class JuegoPage implements AfterViewInit, OnInit{
   canvasElement: any;
   level: number;
 
-  x:any
-  y:any
-  z:any
-  
-  
   PosicionC = false;
   HaveKey = false;
 
@@ -169,14 +164,6 @@ export class JuegoPage implements AfterViewInit, OnInit{
 
   ngAfterViewInit() {
 
-    // let intervaloGrados = setInterval(() =>{
-    //   this.hola()
-    //   if(Math.round(this.laberintoServices.inicialX+this.laberintoServices.casillaFinal[0].valueOf()*this.laberintoServices.moveInX)==Math.round(this.laberintoServices.PlayerX-9) && Math.round(this.laberintoServices.inicialY+this.laberintoServices.casillaFinal[1].valueOf()*this.laberintoServices.moveInY)==Math.round(this.laberintoServices.PlayerY-9) && this.HaveKey==true){
-    //     clearInterval(intervaloGrados)
-    //   }
-      
-    //   },2000);
-
     this.laberintoServices = this.mapa.get(this.level)
     this.canvasElement = this.myCanvas.nativeElement;
     this.canvasElement.width = this.plt.width() + '';
@@ -231,23 +218,6 @@ export class JuegoPage implements AfterViewInit, OnInit{
     this.laberintoServices.PlayerX -= this.laberintoServices.moveInX;
     this.move();
   }  
-  // hola(){
-  //   let xEvent= window.addEventListener('deviceorientation', function(event) {
-  //     return event.alpha;
-  //   });;
-  //   let yEvent=window.addEventListener('deviceorientation', function(event) {
-  //     return event.beta;
-  //   });;
-  //   let zEvent= window.addEventListener('deviceorientation', function(event) {
-  //     return event.gamma;
-  //   });;
-    
-    
-  //   this.x=xEvent;
-  //   this.y=yEvent;
-  //   this.z=zEvent;
-  //   alert(xEvent + ' :2 ' + yEvent + ' : ' + zEvent);
-  // }
 
   public paint(){
     this.context = (<HTMLCanvasElement>this.myCanvas.nativeElement).getContext('2d');
