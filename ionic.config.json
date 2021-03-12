@@ -1,0 +1,7 @@
+{
+  "name": "laberinto",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
